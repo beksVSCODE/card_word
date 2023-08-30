@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 800;
+    outline: none;
+    user-select: none;
+}
+.btn {
+    width: 100%;
+    max-width: 120px;
+    height: 45px;
+    background: none;
+    /* background: url('./icons/day.jpg'); */
+    /* background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+    border-radius: 100px;
+    border: 2.5px solid #82AE9F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    display: none;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+.btn.active{
+    /* box-shadow:0px 0px 0px black; */
+    /* background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+.circle{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: url('./img/USA.png');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.5s;
+    position: absolute;
+    left: 2.7%;
+    top: 4%;
+    will-change:unset;
+}
+.circle.active {
+    background: url('./img/russia.png');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* left: 60%; */
+    left: 100%;
+    transform: translateX(-110%);
+}
+/* заканчивается конпка */
+body{
+    background: gray;
+    width: 100%;
+    overflow-x: hidden;
+    /* position: relative; */
+}
+.page{
+    width: 100%;
+    background: url('./img/обои.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.page__container{ 
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.page__value{
+    width: 320px;
+    height: 65px;
+    font-size: 20px;
+    padding-left: 17px;
+    padding-right: 5px;
+    border-radius: 35px;
+    border: none;
+    caret-color: purple;
+}
+.page__transalte{
+    width: 320px;
+    height: 65px;    
+    font-size: 20px;
+    padding-left: 17px;
+    padding-right: 5px;
+    border-radius: 35px;
+    border: none;
+    caret-color: purple;
+}
+::placeholder{
+    font-size: 20px;
+}
+.page__input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.page__btn{
+    width: 184px;
+    height: 52px;
+    background: #0F4DA9;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    font-size: 25px;
+    color: white;
+    border: none;
+    
+}
+.page__btn__start{
+    width: 184px;
+    height: 52px;
+    background: #FA3939;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    font-size: 25px;
+    color: white;
+    border: none;
+}
+.place{
+    display: none;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+}
+.place__btn{
+    width: 184px;
+    height: 52px;
+    background: #0F4DA9;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    font-size: 25px;
+    color: white;
+    border: none;
+}
+.place__russia{
+    width: 184px;
+    height: 52px;
+    background: #FA3939;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    font-size: 25px;
+    color: white;
+    border: none;
+    position: relative;
+}
+.place__card{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 397px;
+    height: 150px;
+    background: #3464C0;
+    border-radius: 15px;
+    color: white;
+    word-break:break-all;
+   
+}
+.place__card > h1 {
+    font-size: 35px;
+    line-height: 35px;
+    text-align: center;
+}
+.place__title {
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    bottom: 15%;
+    /* word-break: break-all; */
+    /* text-align: center; */
+}
+.place__word{
+    font-size: 40px;
+    line-height: 20px;
+}
+/* .place__card__title{
+    font-size: 100px;
+} */
+
+
+
+
+@media(max-width:470px){
+    .place__card{
+        max-width: 320px;
+        height: 130px;
+    }
+    .btn{
+        max-width: 100px;
+        height: 40px;
+    }
+    .circle{
+        width: 32px;
+        height: 32px;
+    }
+    .place__title {
+        font-size: 28px;
+        color: white;
+        position: absolute;
+        bottom: 13%;
+    }
+    .place__card{
+        word-break:break-all;
+    }
+    .place__card > h1 {
+        font-size: 30px;
+        line-height: 25px;
+    }
+        
+}
+@media(max-width:440px){
+    .page__value{
+        width: 280px;
+        padding-left: 20px;
+        height: 55px;
+    }
+    .page__transalte{
+        width: 280px;
+        padding-left: 20px;
+        height: 55px;
+    }
+    .place__card > h1 {
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .place__title {
+        font-size: 30px;
+    }
+    
+}
+
+@media(max-width:339px){
+    .place__card{
+        max-width: 300px;
+        height: 130px;
+    }
+    .place__card > h1 {
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .place__title {
+        font-size: 30px;
+    }
+}
